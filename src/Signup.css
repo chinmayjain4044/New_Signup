@@ -1,0 +1,167 @@
+.signup-container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .left-section {
+    flex: 1;
+    background: linear-gradient(135deg, #5a31f4, #6b73ff);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px; /* Add padding for some space from the top and sides */
+    position: relative; /* Needed for proper positioning */
+    z-index: 1; /* Ensure the left section content stays above */
+    border-radius: 0 30px 30px 0;
+  }
+  
+  .left-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .Logo .logo-image {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .right-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #ffffff;
+    margin: 20px;
+    position: relative; /* Needed for proper positioning */
+    z-index: 2; /* Ensure it overlaps correctly */
+    max-width: 2500px;
+  }
+  
+  .right-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .signup-form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .form-group input {
+    width: 42%;
+    padding: 15px;
+    border: 1px solid #9e9c9c;
+    border-radius: 10px; /* Adjusted to match the image */
+    outline: none; /* Remove default outline */
+    font-size: 1rem; /* Adjusted font size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  }
+  
+  .signup-form input[type="email"],
+  .signup-form input[type="password"] {
+    width: 100%;
+  }
+  
+  .create-account-btn {
+    background-color: #000;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1rem; /* Adjusted font size */
+  }
+  
+  .create-account-btn:hover {
+    background-color: #333;
+  }
+  
+  .right-section p {
+    margin-top: 10px;
+    align-self: flex-start;
+    color: rgba(103, 102, 102, 1);
+  }
+  
+  .right-section a {
+    color: #5a31f4;
+    text-decoration: none;
+  }
+  
+  .right-section a:hover {
+    color: #000;
+  }
+  
+  hr {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #eaeaea;
+    margin: 20px 0;
+  }
+  
+  .social-login {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 520px;
+    margin-top: 20px;
+  }
+  
+  .google-btn, .facebook-btn {
+    width: 48%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem; /* Adjusted font size */
+  }
+  
+  .google-btn:hover {
+    background: linear-gradient(135deg, #f85d5d, #c71010);
+  }
+  
+  .google-btn {
+    background-color: #db4437;
+    color: white;
+    transition: width 1s;
+  }
+  
+  .facebook-btn {
+    background-color: #3b5998;
+    color: white;
+    transition: width 1s;
+  }
+  
+  .facebook-btn:hover {
+    background: linear-gradient(135deg, #3b5998, #3229d2);
+  }
+  
+  .floating-image {
+    position: absolute;
+    top: 70%;
+    right: 73%;
+    width: 25%; /* Adjust as needed */
+    transform: translate(50%, -50%);
+    z-index: 10; /* Ensure it stays behind the left section content */
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+  
