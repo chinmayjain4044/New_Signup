@@ -1,11 +1,11 @@
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
+import { useNavigate } from 'react-router-dom';
 import './Signup.css';
-import SignupImage from './assets/signup.png'; // Adjust the path according to your folder structure
+import SignupImage from './assets/signup.png';
 import image2 from './assets/logo.png';
 
-// Validation schema
 const SignupSchema = Yup.object().shape({
   firstName: Yup.string().min(5, 'First name should be at least 5 characters').required('First name is required'),
   lastName: Yup.string().required('Last name is required'),
@@ -14,6 +14,8 @@ const SignupSchema = Yup.object().shape({
 });
 
 function Signup() {
+  const navigate = useNavigate();
+
   return (
     <div className="signup-container">
       <div className="left-section">
@@ -27,19 +29,8 @@ function Signup() {
         <Formik
           initialValues={{ firstName: '', lastName: '', email: '', password: '' }}
           validationSchema={SignupSchema}
-          validateOnChange={false} // Disable validation on change
-          validateOnBlur={false} // Disable validation on blur
           onSubmit={(values) => {
-            alert('Form submitted successfully!');
-          }}
-          validate={(values) => {
-            try {
-              SignupSchema.validateSync(values, { abortEarly: false });
-            } catch (errors) {
-              errors.inner.forEach((error) => {
-                alert(error.message);
-              });
-            }
+            navigate('/home', { state: values });
           }}
         >
           {({ isSubmitting }) => (
@@ -57,7 +48,7 @@ function Signup() {
               <button type="submit" className="create-account-btn" disabled={isSubmitting}>
                 Create Account
               </button>
-              <p>Already have an account? <a href="/login">Login</a></p>
+              <p>Already have an account? <a href="/Signup/login">Login</a></p>
               <hr />
               <div className="social-login">
                 <button className="google-btn">Sign up with Google</button>
