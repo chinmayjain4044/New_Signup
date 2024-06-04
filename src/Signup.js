@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import './Signup.css';
 import SignupImage from './assets/signup.png';
-import image2 from './assets/logo.png';
+import image1 from './assets/logo.png';
 
 const SignupSchema = Yup.object().shape({
   firstName: Yup.string().min(5, 'First name should be at least 5 characters').required('First name is required'),
@@ -20,7 +20,7 @@ function Signup() {
     <div className="signup-container">
       <div className="left-section">
         <div className="Logo">
-          <img src={image2} alt="logo" className="logo-image" />
+          <img src={image1} alt="logo" className="logo-image" />
         </div>
         <h2>Stay on top of time tracking</h2>
       </div>
@@ -64,3 +64,4 @@ function Signup() {
 }
 
 export default Signup;
+/*index*/ 
